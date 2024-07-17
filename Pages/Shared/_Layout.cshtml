@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+    @RenderSection("styles", false)
+
+    <style>
+        .img-fixed-size {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .card {
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 0.25rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .card-link {
+            display: block;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .card-link:hover .card-img-top {
+            opacity: 0.85;
+        }
+
+        .card-img-top {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .custom-card {
+            background-color: #e9ecef;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 8px;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .custom-card:hover {
+            transform: scale(1.02);
+        }
+
+        .card-body {
+            padding: 15px;
+        }
+    </style>
+
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-danger">
+            <div class="container">
+                <a class="navbar-brand" href="/">X Haber </a>
+                <ul class="navbar-nav me-auto"> 
+                    <li class="nav-item">
+                        <a href="/Ekonomi" class="nav-link">Ekonomi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Spor" class="nav-link">Spor</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container mt-3">
+        <main>
+           @RenderBody()
+        </main>
+    </div>
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - X Haber - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
