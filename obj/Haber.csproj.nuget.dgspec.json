@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/ogunminkara/Desktop/asp.netcore/Haber /Haber/Haber.csproj": {}
+    "/Users/ogunminkara/Desktop/haberSitesiOrnek/haberSitesiOrnek/Haber.csproj": {}
   },
   "projects": {
-    "/Users/ogunminkara/Desktop/asp.netcore/Haber /Haber/Haber.csproj": {
+    "/Users/ogunminkara/Desktop/haberSitesiOrnek/haberSitesiOrnek/Haber.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/ogunminkara/Desktop/asp.netcore/Haber /Haber/Haber.csproj",
+        "projectUniqueName": "/Users/ogunminkara/Desktop/haberSitesiOrnek/haberSitesiOrnek/Haber.csproj",
         "projectName": "Haber",
-        "projectPath": "/Users/ogunminkara/Desktop/asp.netcore/Haber /Haber/Haber.csproj",
+        "projectPath": "/Users/ogunminkara/Desktop/haberSitesiOrnek/haberSitesiOrnek/Haber.csproj",
         "packagesPath": "/Users/ogunminkara/.nuget/packages/",
-        "outputPath": "/Users/ogunminkara/Desktop/asp.netcore/Haber /Haber/obj/",
+        "outputPath": "/Users/ogunminkara/Desktop/haberSitesiOrnek/haberSitesiOrnek/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/ogunminkara/.nuget/NuGet/NuGet.Config"

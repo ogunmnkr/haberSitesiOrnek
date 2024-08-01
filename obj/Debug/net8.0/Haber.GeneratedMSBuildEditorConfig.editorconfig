@@ -9,51 +9,51 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Haber
 build_property.RootNamespace = Haber
-build_property.ProjectDir = /Users/ogunminkara/Desktop/asp.netcore/Haber /Haber/
+build_property.ProjectDir = /Users/ogunminkara/Desktop/haberSitesiOrnek/haberSitesiOrnek/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/ogunminkara/Desktop/asp.netcore/Haber /Haber
+build_property.MSBuildProjectDirectory = /Users/ogunminkara/Desktop/haberSitesiOrnek/haberSitesiOrnek
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/ogunminkara/Desktop/asp.netcore/Haber /Haber/Pages/Details/Details.cshtml]
+[/Users/ogunminkara/Desktop/haberSitesiOrnek/haberSitesiOrnek/Pages/Details/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRGV0YWlscy9EZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ogunminkara/Desktop/asp.netcore/Haber /Haber/Pages/Ekonomi/Ekonomi.cshtml]
+[/Users/ogunminkara/Desktop/haberSitesiOrnek/haberSitesiOrnek/Pages/Ekonomi/Ekonomi.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRWtvbm9taS9Fa29ub21pLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ogunminkara/Desktop/asp.netcore/Haber /Haber/Pages/Error.cshtml]
+[/Users/ogunminkara/Desktop/haberSitesiOrnek/haberSitesiOrnek/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ogunminkara/Desktop/asp.netcore/Haber /Haber/Pages/Index.cshtml]
+[/Users/ogunminkara/Desktop/haberSitesiOrnek/haberSitesiOrnek/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ogunminkara/Desktop/asp.netcore/Haber /Haber/Pages/Privacy.cshtml]
+[/Users/ogunminkara/Desktop/haberSitesiOrnek/haberSitesiOrnek/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ogunminkara/Desktop/asp.netcore/Haber /Haber/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[/Users/ogunminkara/Desktop/haberSitesiOrnek/haberSitesiOrnek/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ogunminkara/Desktop/asp.netcore/Haber /Haber/Pages/Spor/Spor.cshtml]
+[/Users/ogunminkara/Desktop/haberSitesiOrnek/haberSitesiOrnek/Pages/Spor/Spor.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU3Bvci9TcG9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ogunminkara/Desktop/asp.netcore/Haber /Haber/Pages/_ViewImports.cshtml]
+[/Users/ogunminkara/Desktop/haberSitesiOrnek/haberSitesiOrnek/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ogunminkara/Desktop/asp.netcore/Haber /Haber/Pages/_ViewStart.cshtml]
+[/Users/ogunminkara/Desktop/haberSitesiOrnek/haberSitesiOrnek/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ogunminkara/Desktop/asp.netcore/Haber /Haber/Pages/Shared/_Layout.cshtml]
+[/Users/ogunminkara/Desktop/haberSitesiOrnek/haberSitesiOrnek/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-wdkvrpo5pv

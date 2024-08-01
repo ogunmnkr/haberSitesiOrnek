@@ -54,6 +54,39 @@
         .card-body {
             padding: 15px;
         }
+
+        /* Döviz kurları için yeni stil */
+        .exchange-rates {
+            display: flex;
+            align-items: center;
+            color: white;
+            font-size: 1rem;
+            margin-left: auto;
+            margin-right: 10px; /* Tarih ve saatten biraz mesafe bırakır */
+        }
+
+        .exchange-rate {
+            margin-right: 20px; /* Döviz kurları arasına mesafe bırakır */
+        }
+
+        /* Yukarı Çık Butonu */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            background-color: #465769;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .back-to-top:hover {
+            background-color: #0056b3;
+        }
     </style>
 
     <title>Document</title>
@@ -62,7 +95,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-dark bg-danger">
             <div class="container">
-                <a class="navbar-brand" href="/">X Haber </a>
+                <a class="navbar-brand" href="/">X Haber</a>
                 <ul class="navbar-nav me-auto"> 
                     <li class="nav-item">
                         <a href="/Ekonomi" class="nav-link">Ekonomi</a>
@@ -71,6 +104,16 @@
                         <a href="/Spor" class="nav-link">Spor</a>
                     </li>
                 </ul>
+
+                <div class="exchange-rates" id="exchangeRates">
+                    <!-- Döviz kurları burada gösterilecek -->
+                    <span class="exchange-rate" id="usdToTry">USD/TL: Yükleniyor...</span>
+                    <span class="exchange-rate" id="eurToTry">EUR/TL: Yükleniyor...</span>
+                </div>
+
+                <div class="ml-auto text-white" id="dateTimeDisplay">
+                    <!-- Tarih ve saat buraya yerleştirilecek -->
+                </div>
             </div>
         </nav>
     </header>
@@ -84,9 +127,95 @@
             &copy; 2024 - X Haber - <a asp-area="" asp-page="/Privacy">Privacy</a>
         </div>
     </footer>
+
+    <!-- Yukarı Çık Butonu -->
+    <button class="back-to-top" id="backToTopButton">Sayfanın başına dön</button>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        // Tarih ve saati güncelleyen JavaScript kodu
+        function updateDateTime() {
+    var now = new Date();
+    var options = {
+        weekday: 'long', // Haftanın gününü almak için
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false
+    };
+
+    // Gün bilgisi, tarih ve saat bilgisi bir arada formatlanır
+    var formattedDateTime = now.toLocaleTimeString('tr-TR', options);
+
+    // Gün bilgisi ile beraber saat ve tarih bilgisini göster
+    document.getElementById('dateTimeDisplay').innerText = formattedDateTime;
+}
+
+// Sayfa yüklendiğinde tarih ve saat bilgisi yerleştirilecek
+document.addEventListener('DOMContentLoaded', function() {
+    updateDateTime();
+    setInterval(updateDateTime, 1000); // Tarih ve saat bilgisini her saniye güncelle
+});
+
+    // Sayfa yüklendiğinde tarih ve saat bilgisi yerleştirilecek
+    document.addEventListener('DOMContentLoaded', function() {
+        updateDateTime();
+        setInterval(updateDateTime, 1000); // Tarih ve saat bilgisini her saniye güncelle
+    });
+
+
+
+        // Döviz kurlarını güncelleyen JavaScript kodu
+        async function updateExchangeRates() {
+            try {
+                // Burada döviz kuru API'si ile güncel döviz kurları alınır
+                // Örnek: https://api.exchangeratesapi.io/latest?base=USD
+
+                // API çağrısı ve yanıtın işlenmesi (gerçek bir API'yi kullanarak değiştirin)
+                const response = await fetch('https://api.exchangerate-api.com/v4/latest/USD');
+                const data = await response.json();
+
+                const usdToTry = data.rates.TRY;
+                const eurToTry = data.rates.TRY / data.rates.EUR;
+
+                document.getElementById('usdToTry').innerText = `USD/TL: ${usdToTry.toFixed(2)}`;
+                document.getElementById('eurToTry').innerText = `EUR/TL: ${eurToTry.toFixed(2)}`;
+            } catch (error) {
+                console.error('Döviz kurları alınırken hata oluştu:', error);
+            }
+        }
+
+        // Sayfa yüklendiğinde tarih ve saat bilgisi yerleştirilecek
+        document.addEventListener('DOMContentLoaded', function() {
+            updateDateTime();
+            setInterval(updateDateTime, 1000); // Tarih ve saat bilgisini her saniye güncelle
+
+            updateExchangeRates();
+            setInterval(updateExchangeRates, 60000); // Döviz kurlarını her dakika güncelle
+        });
+
+        // Yukarı Çık Butonu İşlevselliği
+        var backToTopButton = document.getElementById('backToTopButton');
+
+        // Sayfa kaydırıldığında butonu göster/gizle
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 200) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        // Butona tıklandığında sayfanın üstüne git
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
